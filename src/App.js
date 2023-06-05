@@ -6,6 +6,7 @@ import {Switch, Route, Redirect} from 'react-router-dom'
 import ThemeContext from './context/ThemeContext'
 
 import ProtectedRoute from './components/ProtectedRoute'
+import Home from './components/Home'
 
 import LoginForm from './components/LoginForm'
 
@@ -27,6 +28,7 @@ class App extends Component {
       >
         <Switch>
           <Route exact path="/login" component={LoginForm} />
+          <ProtectedRoute exact path="/" component={Home} />
         </Switch>
       </ThemeContext.Provider>
     )
