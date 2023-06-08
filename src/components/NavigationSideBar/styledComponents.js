@@ -38,8 +38,6 @@ export const NavMenuOptionsContainer = styled.ul`
 
 export const NavLink = styled(Link)`
   text-decoration: none;
-  display: flex;
-  align-items: center;
 `
 export const NavMenuOptionItem = styled.li`
   display: flex;

@@ -47,12 +47,12 @@ class NavigationSideBar extends Component {
           return (
             <>
               <MobileNavSideBar>
-                <NavMenuOptionItem
-                  key="home"
-                  bgColor={activeTab === 'Home' ? activeTabBgColor : 'none'}
-                  onClick={onClickOptionHome}
-                >
-                  <NavLink to="/">
+                <NavLink to="/">
+                  <NavMenuOptionItem
+                    key="home"
+                    bgColor={activeTab === 'Home' ? activeTabBgColor : 'none'}
+                    onClick={onClickOptionHome}
+                  >
                     <AiFillHome
                       size={25}
                       color={activeTab === 'Home' ? '#ff0b37' : '#909090'}
@@ -60,78 +60,9 @@ class NavigationSideBar extends Component {
                     <NavOptionName isDarkTheme={isDarkTheme}>
                       Home
                     </NavOptionName>
-                  </NavLink>
-                </NavMenuOptionItem>
-
-                <NavMenuOptionItem
-                  key="trending"
-                  bgColor={activeTab === 'Trending' ? activeTabBgColor : 'none'}
-                  onClick={onClickOptionTrending}
-                >
-                  <NavLink to="/trending">
-                    <HiFire
-                      size={25}
-                      color={activeTab === 'Trending' ? '#ff0b37' : '#909090'}
-                    />
-                    <NavOptionName isDarkTheme={isDarkTheme}>
-                      Trending
-                    </NavOptionName>
-                  </NavLink>
-                </NavMenuOptionItem>
-
-                <NavMenuOptionItem
-                  key="gaming"
-                  bgColor={activeTab === 'Gaming' ? activeTabBgColor : 'none'}
-                  onClick={onClickOptionGaming}
-                >
-                  <NavLink to="/gaming">
-                    <SiYoutubegaming
-                      size={25}
-                      color={activeTab === 'Gaming' ? '#ff0b37' : '#909090'}
-                    />
-                    <NavOptionName isDarkTheme={isDarkTheme}>
-                      Gaming
-                    </NavOptionName>
-                  </NavLink>
-                </NavMenuOptionItem>
-
-                <NavMenuOptionItem
-                  key="saved"
-                  bgColor={activeTab === 'Saved' ? activeTabBgColor : 'none'}
-                  onClick={onClickOptionSaved}
-                >
-                  <NavLink to="/saved-videos">
-                    <CgPlayListAdd
-                      size={25}
-                      color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
-                    />
-                    <NavOptionName isDarkTheme={isDarkTheme}>
-                      Saved videos
-                    </NavOptionName>
-                  </NavLink>
-                </NavMenuOptionItem>
-              </MobileNavSideBar>
-
-              {/* Desktop View */}
-
-              <DesktopNavSideBar isDarkTheme={isDarkTheme}>
-                <NavMenuOptionsContainer>
-                  <NavMenuOptionItem
-                    key="home"
-                    bgColor={activeTab === 'Home' ? activeTabBgColor : 'none'}
-                    onClick={onClickOptionHome}
-                  >
-                    <NavLink to="/">
-                      <AiFillHome
-                        size={25}
-                        color={activeTab === 'Home' ? '#ff0b37' : '#909090'}
-                      />
-                      <NavOptionName isDarkTheme={isDarkTheme}>
-                        Home
-                      </NavOptionName>
-                    </NavLink>
                   </NavMenuOptionItem>
-
+                </NavLink>
+                <NavLink to="/trending">
                   <NavMenuOptionItem
                     key="trending"
                     bgColor={
@@ -139,7 +70,74 @@ class NavigationSideBar extends Component {
                     }
                     onClick={onClickOptionTrending}
                   >
-                    <NavLink to="/trending">
+                    <HiFire
+                      size={25}
+                      color={activeTab === 'Trending' ? '#ff0b37' : '#909090'}
+                    />
+                    <NavOptionName isDarkTheme={isDarkTheme}>
+                      Trending
+                    </NavOptionName>
+                  </NavMenuOptionItem>
+                </NavLink>
+                <NavLink to="/gaming">
+                  <NavMenuOptionItem
+                    key="gaming"
+                    bgColor={activeTab === 'Gaming' ? activeTabBgColor : 'none'}
+                    onClick={onClickOptionGaming}
+                  >
+                    <SiYoutubegaming
+                      size={25}
+                      color={activeTab === 'Gaming' ? '#ff0b37' : '#909090'}
+                    />
+                    <NavOptionName isDarkTheme={isDarkTheme}>
+                      Gaming
+                    </NavOptionName>
+                  </NavMenuOptionItem>
+                </NavLink>
+                <NavLink to="/saved-videos">
+                  <NavMenuOptionItem
+                    key="saved"
+                    bgColor={activeTab === 'Saved' ? activeTabBgColor : 'none'}
+                    onClick={onClickOptionSaved}
+                  >
+                    <CgPlayListAdd
+                      size={25}
+                      color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
+                    />
+                    <NavOptionName isDarkTheme={isDarkTheme}>
+                      Saved videos
+                    </NavOptionName>
+                  </NavMenuOptionItem>
+                </NavLink>
+              </MobileNavSideBar>
+
+              {/* Desktop View */}
+
+              <DesktopNavSideBar isDarkTheme={isDarkTheme}>
+                <NavMenuOptionsContainer>
+                  <NavLink to="/">
+                    <NavMenuOptionItem
+                      key="home"
+                      bgColor={activeTab === 'Home' ? activeTabBgColor : 'none'}
+                      onClick={onClickOptionHome}
+                    >
+                      <AiFillHome
+                        size={25}
+                        color={activeTab === 'Home' ? '#ff0b37' : '#909090'}
+                      />
+                      <NavOptionName isDarkTheme={isDarkTheme}>
+                        Home
+                      </NavOptionName>
+                    </NavMenuOptionItem>
+                  </NavLink>
+                  <NavLink to="/trending">
+                    <NavMenuOptionItem
+                      key="trending"
+                      bgColor={
+                        activeTab === 'Trending' ? activeTabBgColor : 'none'
+                      }
+                      onClick={onClickOptionTrending}
+                    >
                       <HiFire
                         size={25}
                         color={activeTab === 'Trending' ? '#ff0b37' : '#909090'}
@@ -147,15 +145,17 @@ class NavigationSideBar extends Component {
                       <NavOptionName isDarkTheme={isDarkTheme}>
                         Trending
                       </NavOptionName>
-                    </NavLink>
-                  </NavMenuOptionItem>
+                    </NavMenuOptionItem>
+                  </NavLink>
 
-                  <NavMenuOptionItem
-                    key="gaming"
-                    bgColor={activeTab === 'Gaming' ? activeTabBgColor : 'none'}
-                    onClick={onClickOptionGaming}
-                  >
-                    <NavLink to="/gaming">
+                  <NavLink to="/gaming">
+                    <NavMenuOptionItem
+                      key="gaming"
+                      bgColor={
+                        activeTab === 'Gaming' ? activeTabBgColor : 'none'
+                      }
+                      onClick={onClickOptionGaming}
+                    >
                       <SiYoutubegaming
                         size={25}
                         color={activeTab === 'Gaming' ? '#ff0b37' : '#909090'}
@@ -163,15 +163,17 @@ class NavigationSideBar extends Component {
                       <NavOptionName isDarkTheme={isDarkTheme}>
                         Gaming
                       </NavOptionName>
-                    </NavLink>
-                  </NavMenuOptionItem>
+                    </NavMenuOptionItem>
+                  </NavLink>
 
-                  <NavMenuOptionItem
-                    key="saved"
-                    bgColor={activeTab === 'Saved' ? activeTabBgColor : 'none'}
-                    onClick={onClickOptionSaved}
-                  >
-                    <NavLink to="/saved-videos">
+                  <NavLink to="/saved-videos">
+                    <NavMenuOptionItem
+                      key="saved"
+                      bgColor={
+                        activeTab === 'Saved' ? activeTabBgColor : 'none'
+                      }
+                      onClick={onClickOptionSaved}
+                    >
                       <CgPlayListAdd
                         size={25}
                         color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
@@ -179,8 +181,8 @@ class NavigationSideBar extends Component {
                       <NavOptionName isDarkTheme={isDarkTheme}>
                         Saved videos
                       </NavOptionName>
-                    </NavLink>
-                  </NavMenuOptionItem>
+                    </NavMenuOptionItem>
+                  </NavLink>
                 </NavMenuOptionsContainer>
                 <ContactInfo>
                   <ContactInfoHeading isDarkTheme={isDarkTheme}>
