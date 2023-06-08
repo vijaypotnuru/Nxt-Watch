@@ -77,6 +77,7 @@ class LoginForm extends Component {
       <>
         <InputLabel htmlFor="username">USERNAME</InputLabel>
         <UsernameInputField
+          id="username"
           type="text"
           placeholder="Username"
           value={username}
