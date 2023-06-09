@@ -167,6 +167,7 @@ class Home extends Component {
                     color={textColor}
                   />
                   <SearchIconContainer
+                    type="button"
                     data-testid="searchButton"
                     onClick={this.getSearchResults}
                   >

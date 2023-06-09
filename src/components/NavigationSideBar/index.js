@@ -46,7 +46,7 @@ class NavigationSideBar extends Component {
           }
           return (
             <>
-              <MobileNavSideBar>
+              {/* <MobileNavSideBar>
                 <NavLink to="/">
                   <NavMenuOptionItem
                     key="home"
@@ -109,7 +109,7 @@ class NavigationSideBar extends Component {
                     </NavOptionName>
                   </NavMenuOptionItem>
                 </NavLink>
-              </MobileNavSideBar>
+              </MobileNavSideBar> */}
 
               {/* Desktop View */}
 
